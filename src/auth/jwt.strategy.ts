@@ -9,7 +9,7 @@ import { PrismaService } from 'src/prisma.service'
 export class JwtStrategy extends PassportStrategy(Strategy) {
   constructor(
     private readonly configService: ConfigService,
-    private readonly prisma: PrismaService
+    private prisma: PrismaService
   ) {
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
